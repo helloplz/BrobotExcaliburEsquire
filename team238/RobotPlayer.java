@@ -2,7 +2,6 @@ package team238;
 
 import battlecode.common.RobotController;
 
-//Charlie likes penis a lot 
 import behavior.RobotBehavior;
 
 public class RobotPlayer {
