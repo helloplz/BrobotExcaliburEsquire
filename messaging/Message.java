@@ -24,8 +24,10 @@ public class Message {
   /**
    * Create a message that was received.
    */
-  public Message(int channel, MessageType mt) {
-    
+  public Message(int message) {
+    this.message = message;
+    this.messageType = readMessageType(message);
+    this.messageValue = readMessageValue(message);
   }
 
   /**
@@ -61,5 +63,20 @@ public class Message {
    */
   private int readMessageValue(int m) {
     return m & MESSAGE_VALUE_BITMASK;
+  }
+
+  /**
+   * GETter methods.
+   */
+  public int getMessage() {
+    return this.message;
+  }
+
+  public int getMessageValue() {
+    return this.messageValue;
+  }
+
+  public MessageType getMessageType() {
+    return this.messageType;
   }
 }

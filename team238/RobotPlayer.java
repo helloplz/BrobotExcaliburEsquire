@@ -10,7 +10,7 @@ public class RobotPlayer {
     RobotBehavior rb;
     switch (rc.getType()) {
       case HQ:
-        rb = new HQBehavior();
+        //rb = new HQBehavior();
         break;
       case ARTILLERY:
         break;
@@ -28,7 +28,7 @@ public class RobotPlayer {
         throw new RuntimeException("Unrecognized robot type.");
     }
     while (true) {
-      rb.run(rc);
+      //rb.run(rc);
       rc.yield();
     }
   }
