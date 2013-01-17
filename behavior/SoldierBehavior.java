@@ -4,7 +4,7 @@ import battlecode.common.MapLocation;
 import battlecode.common.RobotController;
 
 public class SoldierBehavior extends RobotBehavior {
-  public void moveTo(MapLocation loc) {
+  public void moveTo(RobotController rc, MapLocation loc) {
     
   }
 
