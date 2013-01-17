@@ -1,34 +1,46 @@
 package team238;
 
+import exceptions.UnrecognizedRobotTypeException;
 import battlecode.common.RobotController;
 
-import behavior.RobotBehavior;
+import behavior.*;
 
 public class RobotPlayer {
   public static void run (RobotController rc) {
     RobotBehavior rb;
-    switch (rc.getType()) {
-      case HQ:
-        //rb = new HQBehavior();
-        break;
-      case ARTILLERY:
-        break;
-      case GENERATOR:
-        break;
-      case MEDBAY:
-        break;
-      case SHIELDS:
-        break;
-      case SOLDIER:
-        break;
-      case SUPPLIER:
-        break;
-      default:
-        throw new RuntimeException("Unrecognized robot type.");
+    try {
+      switch (rc.getType()) {
+        case HQ:
+          rb = new HQBehavior();
+          break;
+        case ARTILLERY:
+          rb = new ArtilleryBehavior();
+          break;
+        case GENERATOR:
+          rb = new GeneratorBehavior();
+          break;
+        case MEDBAY:
+          rb = new MedbayBehavior();
+          break;
+        case SHIELDS:
+          rb = new ShieldsBehavior();
+          break;
+        case SOLDIER:
+          rb = new SoldierBehavior();
+          break;
+        case SUPPLIER:
+          rb = new SupplierBehavior();
+          break;
+        default:
+          throw new UnrecognizedRobotTypeException();
+      }
+      while (true) {
+        rb.run(rc);
+        rc.yield();
+      }
     }
-    while (true) {
-      //rb.run(rc);
-      rc.yield();
+    catch (UnrecognizedRobotTypeException e) {
+      
     }
   }
 }
