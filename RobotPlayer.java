@@ -1,9 +1,9 @@
 package team238;
 
-import exceptions.UnrecognizedRobotTypeException;
+import team238.exceptions.UnrecognizedRobotTypeException;
 import battlecode.common.RobotController;
 
-import behavior.*;
+import team238.behavior.*;
 
 public class RobotPlayer {
   public static void run (RobotController rc) {

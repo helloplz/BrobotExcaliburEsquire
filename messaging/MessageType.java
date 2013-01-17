@@ -1,4 +1,4 @@
-package messaging;
+package team238.messaging;
 
 public enum MessageType {
   // Requests from HQ to soldiers:
