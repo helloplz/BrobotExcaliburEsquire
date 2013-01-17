@@ -1,4 +1,4 @@
-package behavior;
+package team238.behavior;
 
 import battlecode.common.MapLocation;
 import battlecode.common.RobotController;

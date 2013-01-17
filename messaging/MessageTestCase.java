@@ -1,4 +1,6 @@
-package messaging;
+package team238.messaging;
+
+//import static org.junit.Assert.*;
 
 import static org.junit.Assert.*;
 

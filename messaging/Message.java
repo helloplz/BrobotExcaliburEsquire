@@ -1,4 +1,4 @@
-package messaging;
+package team238.messaging;
 
 public class Message {
   private final int message;
