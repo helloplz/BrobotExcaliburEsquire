@@ -4,6 +4,8 @@ package team238.messaging;
 
 import static org.junit.Assert.*;
 
+import team238.messaging.MessageType;
+
 import org.junit.Test;
 
 public class MessageTestCase {
@@ -16,7 +18,7 @@ public class MessageTestCase {
       Message m = new Message(type, data);
       int rawMessage = m.getMessage();
       Message m2 = new Message(rawMessage);
-      assertEquals(type, m2.getMessageType());
+      assertTrue(type.equals(m2.getMessageType()));
       assertEquals(data, m2.getMessageValue());
     }
   }
